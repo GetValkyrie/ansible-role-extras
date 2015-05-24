@@ -5,6 +5,7 @@ utility_packages:
   - iotop
   - vim
   - ncdu
+  - tree
 install_image_optimization_packages: True
 image_optimization_packages:
   - libjpeg-progs
