@@ -46,5 +46,6 @@ script:
     && (echo 'Idempotence test: pass' && exit 0)
     || (echo 'Idempotence test: fail' && exit 1)
 
-  # Check that htop is installed
+  # Check that some packages are installed
   - which htop
+  - which iotop
