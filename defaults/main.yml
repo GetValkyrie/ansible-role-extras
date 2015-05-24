@@ -1,0 +1,14 @@
+---
+utility_packages:
+  - htop
+  - strace
+  - iotop
+  - vim
+  - ncdu
+install_image_optimization_packages: True
+image_optimization_packages:
+  - libjpeg-progs
+  - jpegoptim
+  - pngcrush
+  - optipng
+  - pngquant
