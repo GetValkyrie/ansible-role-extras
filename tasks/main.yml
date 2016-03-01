@@ -1,13 +1,15 @@
 ---
-tasks:
+- name: Install utility packages
+  apt:
+    update_cache: yes
+    cache_valid_time: 3600
+    name: "{{ item }}"
+  with_items: utility_packages
 
-  - name: Install utility packages
-    apt:
-      name: "{{ item }}"
-    with_items: utility_packages
-
-  - name: Install image optimization packages
-    apt:
-      name: "{{ item }}"
-    with_items: image_optimization_packages
-    when: install_image_optimization_packages
+- name: Install image optimization packages
+  apt:
+    update_cache: yes
+    cache_valid_time: 3600
+    name: "{{ item }}"
+  with_items: image_optimization_packages
+  when: install_image_optimization_packages
